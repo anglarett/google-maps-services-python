@@ -39,7 +39,7 @@ class AddressValidationTest(TestCase):
             content_type="application/json",
         )
 
-        results = self.client.addressvalidation('US','1600 Amphitheatre Pk', regionCode='US', locality='Mountain View')
+        results = self.client.addressvalidation('1600 Amphitheatre Pk', regionCode='US', locality='Mountain View')
 
         self.assertEqual(1, len(responses.calls))
         self.assertURLEqual(
