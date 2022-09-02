@@ -88,7 +88,7 @@ directions_result = gmaps.directions("Sydney Town Hall",
                                      departure_time=now)
 
 # Validate an address with address validation
-addressvalidation_result =  gmaps.addressvalidation('US','1600 Amphitheatre Pk', locality='Mountain View')
+addressvalidation_result =  gmaps.addressvalidation('1600 Amphitheatre Pk', regionCode='US',locality='Mountain View')
 ```
 
 For more usage examples, check out [the tests](https://github.com/googlemaps/google-maps-services-python/tree/master/tests).
