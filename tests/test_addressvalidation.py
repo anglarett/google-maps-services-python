@@ -26,7 +26,7 @@ from . import TestCase
 
 class AddressValidationTest(TestCase):
     def setUp(self):
-        self.key = "AIzaSyD_sJl0qMA65CYHMBokVfMNA7AKyt5ERYs"
+        self.key = "AIzaSyD_"
         self.client = googlemaps.Client(self.key)
 
     @responses.activate
