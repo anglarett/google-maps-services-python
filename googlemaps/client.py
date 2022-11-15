@@ -177,12 +177,11 @@ class Client:
             "verify": True,  # NOTE(cbro): verify SSL certs.
         })
         
-        self.queries_quota = int
         self.queries_per_second = queries_per_second
         self.queries_per_minute = queries_per_minute
         try: 
             if (type(self.queries_per_second) == int and type(self.queries_per_minute) == int ):
-                self.queries_quota =  math.floor(min(self.queries_per_second, self.queries_per_minute/60))
+                self.queries_quota = math.floor(min(self.queries_per_second, self.queries_per_minute/60))
             elif (self.queries_per_second and type(self.queries_per_second) == int ):
                 self.queries_quota = math.floor(self.queries_per_second)
             elif (self.queries_per_minute and type(self.queries_per_minute) == int ):
